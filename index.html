@@ -15,11 +15,14 @@
 			<div class="container header__inner">
 				<div class="logo">Nova<span>Landing</span></div>
 				<nav class="nav">
-					<a href="#" class="nav__link">Возможности</a>
-					<a href="#" class="nav__link">О проекте</a>
-					<a href="#" class="nav__link">Тарифы</a>
-					<a href="#" class="nav__link nav__link--primary">Начать</a>
+					<a href="#features" class="nav__link">Возможности</a>
+					<a href="#about" class="nav__link">О проекте</a>
+					<a href="#pricing" class="nav__link">Тарифы</a>
+					<a href="#cta" class="nav__link nav__link--primary">Начать</a>
 				</nav>
+				<button class="burger" aria-label="Открыть меню">
+					<span></span><span></span><span></span>
+				</button>
 			</div>
 		</header>
 
@@ -37,8 +40,10 @@
 							аккуратная типографика и наглядная структура.
 						</p>
 						<div class="hero__actions">
-							<a href="#" class="btn btn--primary">Начать практику</a>
-							<a href="#" class="btn btn--ghost">Посмотреть структуру</a>
+							<a href="#cta" class="btn btn--primary">Начать практику</a>
+							<a href="#features" class="btn btn--ghost"
+								>Посмотреть структуру</a
+							>
 						</div>
 						<ul class="hero__list">
 							<li>Flexbox + Grid</li>
@@ -163,7 +168,7 @@
 			</section>
 
 			<!-- PRICING -->
-			<section class="section section--alt id=pricing">
+			<section class="section section--alt" id="pricing">
 				<div class="container">
 					<header class="section__header">
 						<h2 class="section__title">Пример секции "Тарифы"</h2>
@@ -212,35 +217,53 @@
 			</section>
 
 			<!-- CTA -->
-			 <section class='section section--accent id='cta'>
-				<div class='container cta'>
-					<div class='cta__content'>
-						<h2 class='section__title section__title--invert'>
+			<section class="section section--accent" id="cta">
+				<div class="container cta">
+					<div class="cta__content">
+						<h2 class="section__title section__title--invert">
 							Готов сверстать свой первый лендинг по всем правилам?
 						</h2>
-						<p class='section__subtitle section__subtitle--invert'>
-							Скачай этот проект, открой в редакторе и начни изучать каждый блок: от шапки до футера. Меняй стили, ломай, чини -
-							так CSS запоминается лучше всего.
+						<p class="section__subtitle section__subtitle--invert">
+							Скачай этот проект, открой в редакторе и начни изучать каждый
+							блок: от шапки до футера. Меняй стили, ломай, чини - так CSS
+							запоминается лучше всего.
 						</p>
 					</div>
 
-					<form class='cta__form'>
-						<label class='field'>
-							<span class='field__label'>
+					<form class="cta__form">
+						<label class="field">
+							<span class="field__label">
 								>Твой email (для вида, можно не отправлять)
 							</span>
-							<input 
-							type="email"
-							class='field__input'
-							placeholder='you@example.com'
+							<input
+								type="email"
+								class="field__input"
+								placeholder="you@example.com"
 							/>
 						</label>
-						<button type='submit' class='btn btn--primary btn--full'>
+						<button type="submit" class="btn btn--primary btn--full">
 							Получить макет
 						</button>
 					</form>
 				</div>
-			 </section>
+			</section>
 		</main>
+
+		<footer class="footer">
+			<div class="container footer__inner">
+				<p class footer__copy>&#xA9; 2025 NovaLanding. Учебный проект CSS.</p>
+				<a href="#top" class="footer__link">Наверх |</a>
+			</div>
+		</footer>
+
+		<script>
+			const burger = document.querySelector('.burger')
+			const nav = document.querySelector('.nav')
+
+			burger.addEventListener('click', () => {
+				burger.classList.toggle('burger--open')
+				nav.classList.toggle('nav--open')
+			})
+		</script>
 	</body>
 </html>
